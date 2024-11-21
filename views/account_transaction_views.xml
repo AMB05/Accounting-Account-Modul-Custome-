@@ -1,0 +1,95 @@
+<!-- <odoo>
+    <record id="view_account_transaction_tree" model="ir.ui.view">
+        <field name="name">account.transaction.tree</field>
+        <field name="model">account.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="Accounting Transactions">
+                <field name="name"/>
+                <field name="amount"/>
+                <field name="date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_account_transaction_form" model="ir.ui.view">
+        <field name="name">account.transaction.form</field>
+        <field name="model">account.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Accounting Transaction">
+                <group>
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="date"/>
+                    <field name="description"/>
+                    <field name="state"/>
+                    <field name="account_id"/>
+                </group>
+                <footer>
+                    <button string="Confirm" type="object" name="action_confirm" class="btn-primary"/>
+                    <button string="Cancel" type="object" name="action_cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_transaction" model="ir.actions.act_window">
+        <field name="name">Accounting Transactions</field>
+        <field name="res_model">account.transaction</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="my_module_2_menu" name="My Accounting" sequence="10"/>
+    <menuitem id="account_transaction_menu" name="Transactions" parent="my_module_2_menu" action="action_account_transaction"/>
+</odoo> -->
+
+<odoo>
+    <!-- View untuk tampilan daftar transaksi -->
+    <record id="view_account_transaction_tree" model="ir.ui.view">
+        <field name="name">account.transaction.tree</field>
+        <field name="model">account.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="Accounting Transactions">
+                <field name="name"/>
+                <field name="amount"/>
+                <field name="date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- View untuk tampilan form transaksi -->
+    <record id="view_account_transaction_form" model="ir.ui.view">
+        <field name="name">account.transaction.form</field>
+        <field name="model">account.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Accounting Transaction">
+                <group>
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="date"/>
+                    <field name="description"/>
+                    <field name="state"/>
+                    <field name="account_id"/>
+                </group>
+                <footer>
+                    <button string="Confirm" type="object" name="action_confirm" class="btn-primary"/>
+                    <button string="Cancel" type="object" name="action_cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Definisi aksi untuk transaksi akuntansi -->
+    <record id="action_account_transaction" model="ir.actions.act_window">
+        <field name="name">Accounting Transactions</field>
+        <field name="res_model">account.transaction</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <!-- Menu untuk akses modul -->
+    <menuitem id="my_module_2_menu" name="My Accounting" sequence="10"/>
+    <menuitem id="account_transaction_menu" name="Transactions" parent="my_module_2_menu" action="action_account_transaction"/>
+</odoo>
