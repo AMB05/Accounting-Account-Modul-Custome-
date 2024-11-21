@@ -18,5 +18,5 @@ my_module/ \
 ├── static/ \
 │ ├── description/ \
 │ └── src/ \
-└── security/ \
+└── security/ 
 
